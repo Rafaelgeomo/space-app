@@ -18,11 +18,6 @@ const CampoTextoEstilizado = styled.input`
   color: #d9d9d9;
   font-weight: 400;
   line-height: 20px;
-  @font-face {
-    font-family: "Gandhi Sans";
-    src: url("/src/componentes/EstilosGlobais/Fontes/GandhiSans-Regular.otf");
-  }
-  font-family: "Gandhi Sans", sans-serif;
   font-size: 20px;
 `;
 
