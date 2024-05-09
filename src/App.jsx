@@ -16,7 +16,13 @@ const FundoGradiente = styled.div`
   min-height: 100vh;
 `;
 
-const Container = styled.div`
+const AppContainer = styled.div`
+  width: 1440px;
+  margin: 0 auto;
+  max-width: 100%;
+`;
+
+const MainContainer = styled.main`
   display: flex;
   gap: 24px;
 `;
@@ -25,11 +31,13 @@ function App() {
   return (
     <FundoGradiente>
       <EstilosGlobais />
-      <Cabecalho />
-      <Container>
-        <BarraLateral />
-        <Banner backgroundImage={bannerBackground} />
-      </Container>
+      <AppContainer>
+        <Cabecalho />
+        <MainContainer>
+          <BarraLateral />
+          <Banner backgroundImage={bannerBackground} />
+        </MainContainer>
+      </AppContainer>
     </FundoGradiente>
   );
 }

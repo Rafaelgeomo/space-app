@@ -3,7 +3,7 @@ import styled from "styled-components";
 const FigureEstilizada = styled.figure`
   background-image: ${(props) =>
     `url(${props.$backgroundImage})`}; /*isso é JavaScript puro no meio do CSS! O que estamos fazendo aqui é pegar a propriedade $backgroundImage (que você passaria para o componente) e usar como URL para a imagem de fundo. */
-  flex-grow: 2; /*isso faz com que o componente ocupe todo o espaço disponível em um container que usa flexbox, caso haja espaço extra. */
+  flex-grow: 1; /*isso faz com que o componente ocupe todo o espaço disponível em um container que usa flexbox, caso haja espaço extra. */
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
