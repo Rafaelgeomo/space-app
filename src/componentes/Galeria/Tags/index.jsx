@@ -41,6 +41,7 @@ const Tags = ({ setTag }) => {
       <TagTitulo> Busque por tags:</TagTitulo>
       <Div>
         {tags.map((tag) => (
+          // Aqui, usamos o método .map() de um array para transformar cada item do array (neste caso, cada tag) em um componente React (). Isso é uma técnica comum em React para renderizar listas.
           <Tag key={tag.id} onClick={() => setTag(tag.tag)}>
             {tag.titulo}{" "}
           </Tag>

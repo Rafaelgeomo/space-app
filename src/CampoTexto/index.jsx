@@ -35,7 +35,7 @@ const CampoTexto = ({ setFiltro }) => {
     <ContainerEstilizado>
       <CampoTextoEstilizado
         onChange={(evento) => {
-          setFiltro(evento.target.value);
+          setFiltro(evento.target.value); // Neste trecho, estamos vendo a manipulação de eventos em ação. Quando o usuário digita no CampoTextoEstilizado, o evento onChange é disparado, e a função que ele chama atualiza o estado filtro com o valor atual do input.
         }}
         type="text"
         placeholder="O que você procura?"

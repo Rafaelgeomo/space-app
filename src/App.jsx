@@ -9,6 +9,7 @@ import Galeria from "./componentes/Galeria";
 import fotos from "./fotos.json";
 import { useEffect, useState } from "react";
 import ModalZoom from "./componentes/MoldalZoom";
+import Rodape from "./componentes/Rodape";
 
 const FundoGradiente = styled.div`
   background: linear-gradient(
@@ -92,7 +93,8 @@ const App = () => {
     <FundoGradiente>
       <EstilosGlobais />
       <AppContainer>
-        <Cabecalho filtro={filtro} setFiltro={setFiltro} />
+        <Cabecalho filtro={filtro} setFiltro={setFiltro} />{" "}
+        {/* Aqui, estamos vendo o conceito de "props" em ação. Em React, "props" é a abreviação de propriedades. Elas são uma forma de passar dados de pais para filhos. No trecho acima, o componente App está passando várias props para Cabecalho e Galeria. */}
         <MainContainer>
           <BarraLateral />
           <ConteudoGaleria>
@@ -108,9 +110,10 @@ const App = () => {
       </AppContainer>
       <ModalZoom
         foto={fotoComZoom}
-        aoFechar={() => setFotoComZoom(null)}
+        aoFechar={() => setFotoComZoom(null)} //Aqui, a exibição do ModalZoom dependerá de como você implementou esse componente. Presumivelmente, ele só será realmente visível se fotoComZoom não for null.
         aoAlternarFavorito={aoAlternarFavorito}
       />
+      <Rodape />
     </FundoGradiente>
   );
 };
