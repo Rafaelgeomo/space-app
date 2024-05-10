@@ -55,6 +55,19 @@ const App = () => {
     setFotosDaGaleria(fotosFiltradas);
   }, [filtro, tag]);
 
+  // Primeiro validamos pela tag:
+
+  // Se temos alguma tag selecionada, queremos apenas as fotos que possuem aquela tag. Senão temos tag, vamos ignorar esse filtro.
+
+  // A mesma coisa para o filtro em texto. Se temos algum valor digitado, comparamos com a foto.titulo, senão ignoramos.
+
+  // No final, temos as seguinhos combinações:
+
+  //     Se não temos texto na busca ou tag selecionada, retornamos true porque nenhum filtro aplicado
+  //     Se temos apenas o filtro por tag, retornamos todas as fotos daquela tag
+  //     Se temos apenas o filtro por texto, retornamos as fotos que tem aquele texto no título
+  //     Por fim, se temos tag e filtro por texto, filtramos somente as fotos daquela tag e que possuem aquele texto no filtro
+
   const aoAlternarFavorito = (foto) => {
     if (foto.id === fotoComZoom?.id) {
       setFotoComZoom({
